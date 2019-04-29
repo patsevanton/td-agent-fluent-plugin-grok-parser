@@ -25,4 +25,5 @@ cp /tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
 td-agent-gem install –local /tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
 
 %files
-/tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
+/tmp/fluent-plugin-grok-parser-2.5.1.gem
+#/tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
