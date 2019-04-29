@@ -21,9 +21,7 @@ Fluentd plugin to support Logstash-inspired Grok format for parsing logs.
 %{__install} -m 0644 %{SOURCE0} %{buildroot}/tmp/%{gem_name}-%{version}.gem
 
 %post
-cp /tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
-td-agent-gem install –local /tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
+td-agent-gem install –local /tmp/%{gem_name}-%{version}.gem
 
 %files
-/tmp/fluent-plugin-grok-parser-2.5.1.gem
-#/tmp/%{gem_name}-%{version}.gem %{buildroot}%{_bindir}/%{name}
+/tmp/%{gem_name}-%{version}.gem
