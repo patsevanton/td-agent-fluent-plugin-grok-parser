@@ -3,7 +3,7 @@
 
 Name: rubygem-%{gem_name}
 Version: 2.5.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Fluentd plugin to support Logstash-inspired Grok format for parsing logs
 License: Apache-2.0
 URL: https://github.com/fluent/fluent-plugin-grok-parser
@@ -21,7 +21,7 @@ Fluentd plugin to support Logstash-inspired Grok format for parsing logs.
 %{__install} -m 0644 %{SOURCE0} %{buildroot}/tmp/%{gem_name}-%{version}.gem
 
 %post
-td-agent-gem install –local /tmp/%{gem_name}-%{version}.gem
+td-agent-gem install --local /tmp/%{gem_name}-%{version}.gem
 
 %files
 /tmp/%{gem_name}-%{version}.gem
